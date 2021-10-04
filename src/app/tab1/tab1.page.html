@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-icon name="document-outline"></ion-icon> NoteTaker
+    </ion-title>
+    <ion-buttons slot="end" fill="clear">
+      <ion-button (click)="showDeleteConfirmation()">
+        <ion-icon name="trash" slot="start"></ion-icon> Clear
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p *ngIf="!myNotes.length" class="ion-padding-start">No notes yet.</p>
+
+  <ion-list>
+    <ion-item *ngFor="let note of myNotes">
+      <ion-label>
+        <h3 class="boldTitle">{{note.title}}</h3>
+        <p>{{note.whenToDo}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

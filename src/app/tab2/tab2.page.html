@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-icon name="document-outline"></ion-icon> Add note
+    </ion-title>
+    <ion-buttons slot="end" fill="clear">
+      <ion-button (click)="confirmSaveNote()">
+        <ion-icon name="save-outline" slot="start"></ion-icon> Save
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input [(ngModel)]="newNote.title" placeholder="Buy groceries"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">When</ion-label>
+      <ion-input [(ngModel)]="newNote.whenToDo" placeholder="After work"></ion-input>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
